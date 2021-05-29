@@ -13,7 +13,7 @@ def categories(request):
 
 
 def all_products(request):
-    products = Product.objects.all()
+    products = Product.products.all()
     return render(request ,'store/home.html', {'products': products})
 
 def category_list(request, category_slug=None):
